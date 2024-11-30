@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-image {
+    background-image: url("/VG.png"), url("/MG.png"), url("/hero.png"),
+      url("/bgbottom.png");
+    background-color: #0b1d26;
+    background-position: 0 768px, 0 464px, 0 0, 0 440px;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+
+@layer utilities {
+  .bg-equipment {
+    background-image: url("/e1.svg");
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@layer utilities {
+  .bg-equipment2 {
+    background-image: url("/e2.svg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: right;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+@layer utilities {
+  .bg-equipment3 {
+    background-image: url("/e3.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    z-index: 30;
+  }
+}
+
+@layer utilities {
+  .font-f {
+    font-family: "Chronicle Display Black";
+  }
+}
+
+@layer utilities {
+  .font-g {
+    font-family: "Gilroy";
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Chronicle Display Black";
+  src: url("/fonts/Chronicle-Display-Black.woff2") format("woff2"),
+    url("/fonts/Chronicle-Display-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Chronicle Display Black";
+}
